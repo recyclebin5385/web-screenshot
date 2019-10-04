@@ -1,0 +1,5 @@
+*.tgz
+dist
+docs/gen
+node_modules
+.vscode/launch.json

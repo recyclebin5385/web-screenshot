@@ -1,0 +1,38 @@
+{
+  "name": "nodejs-module-template",
+  "shortName": "nodejs-module-template",
+  "version": "0.0.1",
+  "description": "node.js module template",
+  "main": "dist/index.js",
+  "scripts": {
+    "clean": "gulp clean",
+    "build": "gulp",
+    "test": "gulp test",
+    "watch": "gulp watch"
+  },
+  "author": "recyclebin5385",
+  "license": "BSD-2-Clause",
+  "copyright": "Copyright (c) 2019, recyclebin5385",
+  "dependencies": {},
+  "devDependencies": {
+    "del": "^4.1.0",
+    "eslint": "^5.16.0",
+    "eslint-config-recommended": "^4.0.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "gulp": "^4.0.1",
+    "gulp-eslint": "^5.0.0",
+    "gulp-jsdoc3": "^2.0.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-mocha": "^6.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-util": "^3.0.8",
+    "jsdoc": "^3.5.5",
+    "markdownlint": "^0.13.0",
+    "mocha": "^6.1.4",
+    "through2": "^3.0.1"
+  }
+}

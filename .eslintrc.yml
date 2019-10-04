@@ -1,0 +1,25 @@
+extends:
+  - eslint:recommended
+  - standard
+
+rules:
+  no-console: off
+  consistent-return: error
+  default-case: error
+  dot-notation: error
+  strict: error
+  semi-style:
+    - error
+    - last
+  switch-colon-spacing:
+    - error
+    - after: true
+      before: false
+  arrow-body-style:
+    - error
+    - as-needed
+  arrow-parens:
+    - error
+    - as-needed
+  no-var: error
+  prefer-const: error
