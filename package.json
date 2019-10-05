@@ -13,7 +13,12 @@
   "author": "recyclebin5385",
   "license": "BSD-2-Clause",
   "copyright": "Copyright (c) 2019, recyclebin5385",
-  "dependencies": {},
+  "dependencies": {
+    "handlebars": "^4.4.2",
+    "mkdirp": "^0.5.1",
+    "path": "^0.12.7",
+    "puppeteer": "^1.20.0"
+  },
   "devDependencies": {
     "del": "^4.1.0",
     "eslint": "^5.16.0",
