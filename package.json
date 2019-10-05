@@ -14,6 +14,7 @@
   "license": "BSD-2-Clause",
   "copyright": "Copyright (c) 2019, recyclebin5385",
   "dependencies": {
+    "commander": "^3.0.2",
     "handlebars": "^4.4.2",
     "mkdirp": "^0.5.1",
     "path": "^0.12.7",

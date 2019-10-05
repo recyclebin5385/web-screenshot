@@ -72,12 +72,3 @@ module.exports = {
     return new Renderer(options)
   }
 }
-
-async function main () {
-  const renderer = Renderer.create()
-  await renderer.render('http://yahoo.co.jp')
-  await renderer.render('http://google.co.jp')
-  await renderer.dispose()
-}
-
-main()
