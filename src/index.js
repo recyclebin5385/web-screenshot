@@ -28,11 +28,11 @@ Renderer.create = function (options) {
 }
 
 Renderer.prototype.render = async function (url, options) {
-  options = Object.assign({}, options, this.options.render, {
+  options = Object.assign({
     width: 1024,
     height: 0,
     outputPath: 'image{{count}}.png'
-  })
+  }, this.options.render, options)
 
   this.renderCount++
   const outputPath = Handlebars.compile(options.outputPath)({
