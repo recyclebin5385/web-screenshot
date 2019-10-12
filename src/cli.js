@@ -6,7 +6,7 @@ const fs = require('fs')
 async function main () {
   program
     .version('@@pkg.version')
-    .usage('[options] URLs...')
+    .usage('[options] URLs_or_files...')
     .option('-w, --width <number>', 'Width of the screenshot', (value, previous) => parseInt(value))
     .option('-h, --height <number>', 'Height of the screenshot, 0 for unlimited', (value, previous) => parseInt(value))
     .option('-o, --out <pattern>', 'Pattern of the output image file path', value => value)
