@@ -1,7 +1,6 @@
 const webScreenshot = require('./index')
 const program = require('commander')
-const yaml = require('js-yaml')
-const fs = require('fs')
+const { cosmiconfig } = require('cosmiconfig')
 
 async function main () {
   program
@@ -14,10 +13,17 @@ async function main () {
     .helpOption('--help')
   program.parse(process.argv)
 
-  let options = {}
-  if (program.config) {
-    options = yaml.safeLoad(fs.readFileSync(program.config, 'utf8'))
+  const explorer = cosmiconfig('@@pkg.name')
+  const result = await program.config ? explorer.load(program.config) : explorer.search()
+  let options
+  if (result) {
+    console.error('Configuration file: %s', result.filepath)
+    options = result.config
+  } else {
+    console.error('No configuration file has been found.')
+    options = {}
   }
+
   if (!options.render) {
     options.render = {}
   }

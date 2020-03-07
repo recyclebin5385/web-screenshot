@@ -15,8 +15,8 @@
   "copyright": "Copyright (c) 2019, recyclebin5385",
   "dependencies": {
     "commander": "^3.0.2",
-    "handlebars": "^4.4.2",
-    "js-yaml": "^3.13.1",
+    "cosmiconfig": "^6.0.0",
+    "handlebars": "^4.5.2",
     "mkdirp": "^0.5.1",
     "path": "^0.12.7",
     "puppeteer": "^1.20.0"
