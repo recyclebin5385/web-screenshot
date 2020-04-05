@@ -16,6 +16,9 @@
   "author": "recyclebin5385",
   "license": "BSD-2-Clause",
   "copyright": "Copyright (c) 2019, recyclebin5385",
+  "engines": {
+    "node": ">=10.12.0"
+  },
   "dependencies": {
     "commander": "^3.0.2",
     "cosmiconfig": "^6.0.0",
