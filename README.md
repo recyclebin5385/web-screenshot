@@ -1,4 +1,4 @@
-# web-screenshot
+# webpage2image
 
 [![License](https://img.shields.io/badge/License-BSD%202--Clause-blue.svg)](https://opensource.org/licenses/BSD-2-Clause)
 
@@ -8,11 +8,11 @@ A command line tool to take a screenshot of a web page.
 
 With [Node.js](http://nodejs.org):
 
-    npm install -g web-screenshot
+    npm install -g webpage2image
 
 It can also be installed as a dependency of another Node.js package.
 
-    npm install -S web-screenshot
+    npm install -S webpage2image
 
 ## Usage
 
@@ -21,16 +21,16 @@ It can also be installed as a dependency of another Node.js package.
 Specify URLs or local file paths as command line arguments.
 
 ```sh
-web-screenshot http://example.org
-web-screenshot file:///C:/path/to/example.html
-web-screenshot example1.html C:\\path\\to\\example2.html
+webpage2image http://example.org
+webpage2image file:///C:/path/to/example.html
+webpage2image example1.html C:\\path\\to\\example2.html
 ```
 
 You can configure the behavior via command line options.
-Execute "web-screenshot -h" for details.
+Execute "webpage2image -h" for details.
 
 You can also use a configuration file.
-Place a file named ".web-screenshotrc" (beware of the dot)
+Place a file named ".webpage2imagerc" (beware of the dot)
 in the current directory or its ancestors.
 You can also specify an arbitrary configuration file path with option -c.
 Below is an example of a configuration file.
@@ -56,7 +56,7 @@ Below is the list of available variables.
 ### As a module
 
 ```javascript
-const webScreenshot = require('web-screenshot')
+const webScreenshot = require('webpage2image')
 
 async function main () {
   const renderer = webScreenshot.newRenderer()
@@ -78,7 +78,7 @@ Released on April 5, 2020
 
 ## Development
 
-The source can be found at [GitHub](https://github.com/recyclebin5385/web-screenshot).
+The source can be found at [GitHub](https://github.com/recyclebin5385/webpage2image).
 
 This project uses [npm](https://www.npmjs.com/) for development.
 

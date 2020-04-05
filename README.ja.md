@@ -1,4 +1,4 @@
-# web-screenshot
+# webpage2image
 
 [![License](https://img.shields.io/badge/License-BSD%202--Clause-blue.svg)](https://opensource.org/licenses/BSD-2-Clause)
 
@@ -8,11 +8,11 @@
 
 [Node.js](http://nodejs.org)の場合:
 
-    npm install -g web-screenshot
+    npm install -g webpage2image
 
 他のNode.jsパッケージの依存先としてインストールすることも可能です。
 
-    npm install -S web-screenshot
+    npm install -S webpage2image
 
 ## 使用法
 
@@ -21,16 +21,16 @@
 コマンドライン引数としてURLまたはローカルファイルのパスを指定してください。
 
 ```sh
-web-screenshot http://example.org
-web-screenshot file:///C:/path/to/example.html
-web-screenshot example1.html C:\\path\\to\\example2.html
+webpage2image http://example.org
+webpage2image file:///C:/path/to/example.html
+webpage2image example1.html C:\\path\\to\\example2.html
 ```
 
 コマンドラインオプションで動作を設定することができます。
-詳細は "web-screenshot -h" を実行してください。
+詳細は "webpage2image -h" を実行してください。
 
 設定ファイルを用いることもできます。
-".web-screenshotrc"という名称 (ピリオドに注意) のファイルをカレントディレクトリかその上位のディレクトリに配置します。
+".webpage2imagerc"という名称 (ピリオドに注意) のファイルをカレントディレクトリかその上位のディレクトリに配置します。
 オプション-cによって任意の設定ファイルを指定することも可能です。
 以下は設定ファイルの例です。
 
@@ -54,7 +54,7 @@ render: # レンダリングのオプション
 ### モジュールとして
 
 ```javascript
-const webScreenshot = require('web-screenshot')
+const webScreenshot = require('webpage2image')
 
 async function main () {
   const renderer = webScreenshot.newRenderer()
@@ -76,7 +76,7 @@ main()
 
 ## 開発者向け情報
 
-ソースコードは[GitHub](https://github.com/recyclebin5385/web-screenshot)から取得することができます。
+ソースコードは[GitHub](https://github.com/recyclebin5385/webpage2image)から取得することができます。
 
 このプロジェクトでは開発用に[npm](https://www.npmjs.com/)を使用しています。
 

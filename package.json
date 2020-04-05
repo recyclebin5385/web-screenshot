@@ -1,6 +1,6 @@
 {
-  "name": "web-screenshot",
-  "shortName": "web-screenshot",
+  "name": "webpage2image",
+  "shortName": "webpage2image",
   "version": "0.1.0",
   "description": "A command line tool to take screenshots of web pages.",
   "main": "dist/index.js",
@@ -11,7 +11,7 @@
     "watch": "gulp watch"
   },
   "bin": {
-    "web-screenshot": "dist/cli.js"
+    "webpage2image": "dist/cli.js"
   },
   "author": "recyclebin5385",
   "license": "BSD-2-Clause",
