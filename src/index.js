@@ -7,6 +7,7 @@
  */
 
 const puppeteer = require('puppeteer')
+const url = require('url')
 const path = require('path')
 const mkdirp = require('mkdirp')
 const Handlebars = require('handlebars')
@@ -44,25 +45,26 @@ function Renderer (options) {
  * </dl>
  *
  * @async
- * @param {string} url The URL
+ * @param {string} location The URL or local file path
  * @param {Object} [options] The options
  * @param {Number} [options.width] The width of the image
  * @param {Number} [options.height] The height of the image, 0 for unlimited
  * @param {string} [options.outputPath] The file path of the saved image
  * @returns {Promise} The promise object
  */
-Renderer.prototype.render = async function (url, options) {
+Renderer.prototype.render = async function (location, options) {
   options = Object.assign({
     width: 1024,
     height: 0,
     outputPath: 'image{{count}}.png'
   }, this.options.render, options)
 
+  const resolvedUrl = /^[a-zA-Z0-9]+:\/\//.test(location) ? location : url.pathToFileURL(location).href
   this.renderCount++
   const outputPath = Handlebars.compile(options.outputPath)({
     count: this.renderCount,
-    url: url,
-    urlBasename: url.replace(/^(?:.*[\\/])?(.+?)[\\/]?$/, '$1')
+    location: location,
+    basename: location.replace(/^(?:.*[\\/])?(.+?)[\\/]?$/, '$1')
   })
 
   const browser = await this.browserPromise
@@ -72,7 +74,7 @@ Renderer.prototype.render = async function (url, options) {
     width: options.width,
     height: Math.max(options.height, 1)
   })
-  await page.goto(url)
+  await page.goto(resolvedUrl)
   await mkdirp(path.dirname(outputPath))
   await page.screenshot({
     path: outputPath,

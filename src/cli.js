@@ -42,9 +42,9 @@ async function main () {
   const renderer = webScreenshot.newRenderer(options)
 
   try {
-    for (const url of program.args) {
-      await renderer.render(url)
-      console.error('%s has been rendered.', url)
+    for (const urlOrFile of program.args) {
+      await renderer.render(urlOrFile)
+      console.error('%s has been rendered.', urlOrFile)
     }
   } finally {
     await renderer.dispose()
