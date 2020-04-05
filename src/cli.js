@@ -43,8 +43,8 @@ async function main () {
 
   try {
     for (const urlOrFile of program.args) {
-      await renderer.render(urlOrFile)
-      console.error('%s has been rendered.', urlOrFile)
+      const result = await renderer.render(urlOrFile)
+      console.error('Image %d: %s -> %s', result.renderCount, urlOrFile, result.outputPath)
     }
   } finally {
     await renderer.dispose()

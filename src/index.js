@@ -80,6 +80,12 @@ Renderer.prototype.render = async function (location, options) {
     path: outputPath,
     fullPage: options.height <= 0
   })
+
+  return {
+    renderCount: this.renderCount,
+    outputPath: outputPath,
+    url: resolvedUrl
+  }
 }
 
 /**
