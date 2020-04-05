@@ -18,12 +18,21 @@ It can also be installed as a dependency of another Node.js package.
 
 ### As a command line tool
 
+Specify URLs or local file paths as command line arguments.
+
 ```sh
 web-screenshot http://example.org
-web-screenshot example.html
+web-screenshot file:///C:/path/to/example.html
+web-screenshot example1.html C:\\path\\to\\example2.html
 ```
 
-You can specify a configuration file with option -c.
+You can configure the behavior via command line options.
+Execute "web-screenshot -h" for details.
+
+You can also use a configuration file.
+Place a file named ".web-screenshotrc" (beware of the dot)
+in the current directory or its ancestors.
+You can also specify an arbitrary configuration file path with option -c.
 Below is an example of a configuration file.
 
 ```yaml
@@ -35,12 +44,14 @@ render: # rendering options
   outputPath: "out/img-{{count}}.png" # path of the output image file
 ```
 
-You can specify a {@link https://handlebarsjs.com/ Handlebars} template for "render.outputPath" and embed some variables.
+As the path of the output image file,
+You can specify a [https://handlebarsjs.com/](Handlebars) template
+and embed some variables.
 Below is the list of available variables.
 
-- count: The number of URLs which have been rendered
-- url: The URL
-- urlBasename: The base name of the URL
+- count: The number of images which have been rendered
+- location: The given URL or local file path
+- basename: The base name of the URL or local file path
 
 ### As a module
 
@@ -49,8 +60,8 @@ const webScreenshot = require('web-screenshot')
 
 async function main () {
   const renderer = webScreenshot.newRenderer()
-  await renderer.render('http://yahoo.co.jp')
-  await renderer.render('http://google.co.jp')
+  await renderer.render('http://example.org')
+  await renderer.render('path/to/example.html')
   await renderer.dispose()
 }
 
@@ -61,15 +72,17 @@ main()
 
 ### version 0.1.0
 
-Released on yyyy-MM-dd
+Released on April 5, 2020
 
 - Initial release
 
 ## Development
 
+The source can be found at [GitHub](https://github.com/recyclebin5385/web-screenshot).
+
 This project uses [npm](https://www.npmjs.com/) for development.
 
-Try these commands on the top folder of the project.
+Try these commands on the top directory of the project.
 
 ```sh
 npm install
@@ -78,9 +91,9 @@ npm run build
 
 ## Author
 
- -  recyclebin5385
-     - [github](https://github.com/recyclebin5385)
-     - [twitter](https://twitter.com/recyclebin5385)
+- recyclebin5385
+  - [github](https://github.com/recyclebin5385)
+  - [twitter](https://twitter.com/recyclebin5385)
 
 ## License
 
