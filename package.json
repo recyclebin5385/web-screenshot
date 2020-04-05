@@ -22,7 +22,7 @@
   "dependencies": {
     "commander": "^3.0.2",
     "cosmiconfig": "^6.0.0",
-    "handlebars": "^4.7.3",
+    "handlebars": "^4.7.6",
     "mkdirp": "^0.5.1",
     "path": "^0.12.7",
     "puppeteer": "^1.20.0"
@@ -40,11 +40,12 @@
     "gulp-eslint": "^6.0.0",
     "gulp-jsdoc3": "^2.0.0",
     "gulp-load-plugins": "^1.5.0",
-    "gulp-mocha": "^6.0.0",
+    "gulp-mocha": "^7.0.2",
     "gulp-replace": "^1.0.0",
     "gulp-util": "^3.0.8",
     "jsdoc": "^3.5.5",
     "markdownlint": "^0.13.0",
+    "minimist": "^1.2.5",
     "mocha": "^6.2.2",
     "through2": "^3.0.1"
   }
