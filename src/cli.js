@@ -8,10 +8,10 @@ async function main () {
   program
     .version('@@pkg.version')
     .usage('[options] URLs_or_files...')
-    .option('-w, --width <number>', 'Width of the screenshot', (value, previous) => parseInt(value))
-    .option('-h, --height <number>', 'Height of the screenshot, 0 for unlimited', (value, previous) => parseInt(value))
-    .option('-o, --out <pattern>', 'Pattern of the output image file path', value => value)
-    .option('-c, --config <file>', 'Configuration file path')
+    .option('-w, --width <number>', 'specify the width of the screenshot', (value, previous) => parseInt(value))
+    .option('-h, --height <number>', 'specify the height of the screenshot, 0 for unlimited', (value, previous) => parseInt(value))
+    .option('-o, --out <pattern>', 'specify the pattern of the output image file path', value => value)
+    .option('-c, --config <file>', 'specify the configuration file path')
     .helpOption('--help')
   program.parse(process.argv)
 
