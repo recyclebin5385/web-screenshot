@@ -16,7 +16,7 @@ async function main () {
   program.parse(process.argv)
 
   const explorer = cosmiconfig('@@pkg.name')
-  const result = await program.config ? explorer.load(program.config) : explorer.search()
+  const result = program.config ? await explorer.load(program.config) : await explorer.search()
   let options
   if (result) {
     console.error('Configuration file: %s', result.filepath)
