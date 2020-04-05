@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const webScreenshot = require('./index')
 const program = require('commander')
 const { cosmiconfig } = require('cosmiconfig')
