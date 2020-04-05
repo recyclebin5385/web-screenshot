@@ -6,6 +6,7 @@ const { cosmiconfig } = require('cosmiconfig')
 
 async function main () {
   program
+    .name('@@pkg.name')
     .version('@@pkg.version')
     .usage('[options] URLs_or_files...')
     .option('-W, --width <number>', 'specify the width of the screenshot', (value, previous) => parseInt(value))
