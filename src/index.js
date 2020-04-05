@@ -30,6 +30,13 @@ function Renderer (options) {
 }
 
 /**
+ * @typedef {Object} RenderResult
+ * @property {Number} renderCount - The number of URLs or local files which have been rendered so far
+ * @property {String} outputPath - The path of the rendered image
+ * @property {String} url - The URL resolved from the location
+ */
+
+/**
  * Render the specified web page and save the image.
  *
  * A {@link https://handlebarsjs.com/ Handlebars} template can be used in "options.outputPath".
@@ -37,11 +44,11 @@ function Renderer (options) {
  *
  * <dl>
  * <dt>count</dt>
- * <dd>The number of URLs which have been rendered</dd>
- * <dt>url</dt>
- * <dd>The URL</dd>
- * <dt>urlBasename</dt>
- * <dd>The base name of the URL</dd>
+ * <dd>The number of URLs or local files which have been rendered so far</dd>
+ * <dt>location</dt>
+ * <dd>The URL or local file path</dd>
+ * <dt>basename</dt>
+ * <dd>The base name of the location</dd>
  * </dl>
  *
  * @async
@@ -50,7 +57,7 @@ function Renderer (options) {
  * @param {Number} [options.width] The width of the image
  * @param {Number} [options.height] The height of the image, 0 for unlimited
  * @param {string} [options.outputPath] The file path of the saved image
- * @returns {Promise} The promise object
+ * @returns {Promise<module:@@pkg.name~RenderResult>} The result
  */
 Renderer.prototype.render = async function (location, options) {
   options = Object.assign({
