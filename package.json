@@ -13,9 +13,13 @@
   "bin": {
     "webpage2image": "dist/cli.js"
   },
+  "repository" : {
+    "type": "git",
+    "url": "https://github.com/recyclebin5385/webpage2image.git"
+  },
   "author": "recyclebin5385",
   "license": "BSD-2-Clause",
-  "copyright": "Copyright (c) 2019, recyclebin5385",
+  "copyright": "Copyright (c) 2020, recyclebin5385",
   "engines": {
     "node": ">=10.12.0"
   },
