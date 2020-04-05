@@ -10,6 +10,9 @@
     "test": "gulp test",
     "watch": "gulp watch"
   },
+  "bin": {
+    "web-screenshot": "dist/cli.js"
+  },
   "author": "recyclebin5385",
   "license": "BSD-2-Clause",
   "copyright": "Copyright (c) 2019, recyclebin5385",
